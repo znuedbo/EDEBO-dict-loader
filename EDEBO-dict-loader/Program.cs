@@ -22,7 +22,15 @@ namespace EDEBO_dict_loader
                 System.Console.ReadKey();
                 return;
             }
-
+            try
+            {
+                Guid guid = new Guid(session);
+            }
+            catch(Exception exception)
+            {
+                System.Console.WriteLine(exception.Message);
+            }
+            
             System.Console.WriteLine("Done.");
             System.Console.Write("Logout...");
             guides.Logout(session);
