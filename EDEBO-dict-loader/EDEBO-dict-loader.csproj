@@ -1,0 +1,1857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72D11D85-FBAA-4929-BFFB-D2647DDA25BD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDEBO_dict_loader</RootNamespace>
+    <AssemblyName>EDEBO-dict-loader</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ua.edu.znu.edbo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\d23nk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\d23nkCheckPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\d23nk_1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\d23nk_12.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\d23nk_const.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicAttestationCase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicAttestationCaseSatusHistoryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicAttestationCaseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicAttestationGlobalStatusType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicBoard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicBoardData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCards.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCardsFindAcademics.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncil.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncilPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncilPersonType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncilScienseSpeciality.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncilSpecDecision.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicCouncilType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationAll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationCancelationTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationDegreDetailType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationDegreType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationForm.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationHistoryAcademicLeaveType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationHistoryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicEducationOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicRank.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicRankType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports1HK.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports1HKData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports7A.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports7AData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports8D.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReports8DData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsFactPriyom.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsFactPriyomData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsPlanPriyom.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsPlanPriyomData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsPlanVipusk.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsPlanVipuskData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsSpec.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicReportsSpecData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAcademicYears.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsClient.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsClientCount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsClientText.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsDetaisText.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsMain.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dAlertsWeight.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBanks.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBenefits.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersDataDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersDataDetailsHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersDataIssuedDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersDataRemainsDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersIssued.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersMainIssued.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersMainRemains.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersMainRemainsChild.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersRemains.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlanksOrdersUniversityParent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dBlankType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dCertifyingAgencies.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dCourses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsDocumentTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsErrors.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsOutput.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsOutputCreate.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsOutputData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsOutputDataView.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsPackage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsPackageData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsPackageDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignsPackageHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignVerify.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentSignXml.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsImportType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsJurnals.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsJurnalsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsRetun.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDeliveryOfDocumentsStatusesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDictOrderOfDocumentsRegions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDictOrderOfDocumentsRegionsDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsBlankType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsChipSeriesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsPaymentSystemTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsFacultets.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsFacultets_History.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsOrderData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsOrderTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsSign.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersonsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dDocumentsResponsiblePersons_History.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOAuthority.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_rvk77.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_rvk77Exist.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_rvk83.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_rvk83Exist.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_znz1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_znz1Exist.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_znz1_ext.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOreport_znz1_extExist.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEDBOISUOZNZ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCycles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesAcademRules.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesDisciplines.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesDisciplinesGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesDisciplinesPeriods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesDisciplinesPeriodsGlobal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesDisciplinesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesEmulationStudent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesLanguages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesPatternDisciplines.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesPatternDisciplinesGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesPatterns.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesPatternsAllDisciplines.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesProfRules.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesStudent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCyclesStudentsGetByEduParams.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCycles_Judgments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCycles_Knowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCycles_Program.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationalCycles_UseKnowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationQualifications.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEducationTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dEntranceExamination.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetExamenTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheets.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheets2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetsDataReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetsPersonData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetsRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetStatuses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExaminationSheetValuesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtAttestats.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtAttestatsUz.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtAttestatsUzFindOper.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtAttestatsZNOFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtZNO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtZNOByFIO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dExtZNOUz.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGetUniversityByUserSession.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGloabalInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobalOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobalRishen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobalRishenData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobalRishenDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobalRishenUniversity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobal_EducationalCycles_Judgments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobal_EducationalCycles_Knowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGlobal_EducationalCycles_UseKnowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduates.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesAdditionalInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesDataAdditionalInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesDataDisciplines.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesDataDisciplinesNationalGradesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesEntryRequirementsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesFindStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesGlobalInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesInfoForEducation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesJudgments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesKnowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesMainGlobalInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesProgram.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dGraduatesUseKnowledge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dImportDocFindByName.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dImportSpec2015_PerBAKMAGSPEC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dImportSpec2015_PerMS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dKOATUU.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dLanguages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dLastError.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dMinisters.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOfficeOfInstitutions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOlympiads.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOlympiads2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOlympiadsAwards.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOlympiadsPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOlympiadsPersonsSubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDataSignsVerify.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDataStudentsFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDataXMLExport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDataXMLExportHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDelivered.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEDocumentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEInformation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEInformationEDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentERereleaseOkupPersonFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentERereleaseOkupUniversityFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentERereleaseOsvitaPersonFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentERereleasePersonFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentESigns.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentESigns2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentESignsVerify.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentEType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_AllPackagesDownloadHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Cancelation_CauseTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Cancelation_Orders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Cancelation_OrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Cancelation_OrdersDataDocFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Ground.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_GroundLicenseDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_GroundPtnzSvidDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_GroundTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_LicChek.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackageDataInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackageRegulationDocumentsFilePages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackageResponseFiles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_Packages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackagesDownloadHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackagesHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackageUniversityDocInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_PackageXML.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_RereleaseSubtypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_ResponseFiles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_ResponseFilesSignsVerify.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentE_StatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentRenewTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsAddRet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsDatas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsDatasExport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsDatasStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsForAddRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsForAddRequestsFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsForAddStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsGroupsAddRet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsRegionsDocumentsPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsSendPackage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsSendPackageData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsSendPackageStatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrderOfDocumentsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollments2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsAcesses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsAdditionalOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsAdditionalOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsAdditionalOrdersDataCauseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsAdditionalOrdersTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOrdersOfEnrollmentsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOverLicense.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOverLicenseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOwnSpecDirections.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOwnSpecIndastries.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dOwnSpecSpeciality.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorCategories.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorDataTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicators.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorsAdditionalValues.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorsMain.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorsSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorSubcategories.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPerformanceIndicatorValueDimensions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonDeleteRequest.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonDeleteRequestData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationHistoryOrdersRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationHistoryOrdersRequestsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationHistoryOrdersRequestsPersonFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationHistoryOrdersRequestsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressControlCapasity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressControlType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressOrdersType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressPeriods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressPeriodType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonEducationProgressType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonRequestSeasonRequestAddCustomUniversitySetting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonSubjectsOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonSubjectsOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkAll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkCancelationType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkCharges.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkHistoryScansPages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkPosts.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkTariffTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dPersonWorkTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dProfessionUps.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dProfessionUpsPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dProfessionUpsPersonsFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dProfUniversity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQualificationGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQualificationsEx.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQueries.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQueriesText.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQueryFilters.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQuestionnaires.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQuestionnairesQuestion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQuestionnairesQuestionValue.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQuestionnairesQuestionWishes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dQuotas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsForExport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsKoeficients.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsKoeficientsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData1Periods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData234.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData234Periods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData234Professions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData234Subjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData5.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData5Groups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData5Subjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData61.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReceptionConditionAdditionsTableData62.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentDataImage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentDataTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentFormats.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsExistFileTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsFile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsFileGetFirstPage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsFilePages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsOldVersions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsPageFile.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsRekvizit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsSign.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentsSignXml.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentTypesGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentVerificationHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRegulationDocumentVerificationHistoryTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReportEmployments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReportEmploymentsChild.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReportEmploymentsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReportEmploymentsDataPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dReportEmploymentsOperators.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRisks.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRisksAll.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dRisksDatas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSchoolAddRet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSchools.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dScienceIndustry.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dScienceSciense.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dScienceSpeciality.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpec.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecAddRet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecDirections.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecDirections2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecDirectionsGuids.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecDirectionsSubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecIndastries.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecIndastries2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecProfessions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecProfessionsRang.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecProfessionsRangType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecRedactions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecialities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecialities2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecialitiesGuids.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecialization.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecializationAllRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecializationRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecializationRequestsGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecializationRequestsGroupStatuses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecSpecializations.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSpecUniversity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrderOsnovaType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrdersCategories.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrdersGenerateHtml.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStateOrdersTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dStreetTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSupportRequest.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dSupportRequestTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgoda.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgodaClient.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgodaSetting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgodaStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgodaTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniveristyDopUgodaValues.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversities3.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesActivity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesActivitySubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesActivityTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesChild.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesCities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesCodes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesFind2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesFindLite.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitiesHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityAccreditation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityAcreditatinTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBossOperatedTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBossOrderOrganisation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBossScan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuilding.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingDocumentsScanPages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingDocumentsSubtypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingDocumentsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingOwnerForms.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingPasports.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityBuildingTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCertificates.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCertificatesPasswords.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityChanges.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCloseStatusTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCourses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesAdd.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesStudentsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesStudentsRetun.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesStudentsSpec.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesTransferCourses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesTransferGrups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityCoursesTransferStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityDiscipline.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityDisciplineForLinkToCat.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityDisciplinesCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityEarlyPreview.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityEntrantWaves.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityEntrantWaves2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityEntrantWavesRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityEntrantWavesRequests2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityExtIds.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityExtIdsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultets.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultets2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsForTree.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialities2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesAndRequest.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesQuotas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesSubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesSubjects2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesSubjectsChild.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesWaves.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialitiesWaves2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetSpecialities_RCA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsRequests2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsRequests3.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsRequestsOpers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityFacultetsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityGovernanceTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityGovernanceTypesCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityGovernanceTypesForEdit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityGroups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityGroupsStudents.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityImportDocData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityImportDocType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityJuristyialTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicenseCertificate.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicenseCertificateData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicenseCertificateProlongationType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicenseInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicenses.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesAllProfs.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesAllSpec.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesDataPtnzDetailedSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesDataPtnzGet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesDetailedSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesGlobalRishen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesOrganisations.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesOrganisationsRishen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvid.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvidData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvidDataDetailedSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvidDetailedSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvidGlobalRishen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesPtnzSvidRegNumbers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesRegNumbers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesReorganisation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesReorganisationData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesReorganisationLicenseDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesReorganisationLicenseFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityLicensesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityManagmentOrganisations.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityManagmentOrganisationsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityMemorandums.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityNationalGraduates.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityNationalGraduatesDate.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityNationalGraduatesTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOperatorStateOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderBuilding.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderBuildingDataFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderCategoryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDataAcreditationType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDataLicensesSubTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDataPersonWorks.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDataRozyasType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDeliveryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderDocuments.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderPersonWorks.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequests.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsCalendar.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsCalendarMin.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsCategories.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsDataSource.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsDataType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsStatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestUniversityOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderRequestUniversityOrdersFind.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderStatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityOrderType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityRegistrations.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityRegistrationsTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityRequestsStat.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityRoleTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityScienseSpecialitiesAspirants.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityScienseSpecialitiesDoctorants.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitySpecDirectionsSubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitySpecDirectionsSubjectsDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitySpecSpecialitySubjects.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversitySpecSpecialitySubjectsDetails.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityStateOrders.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityStateOrdersData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityStateOrdersTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityStructureSpecialities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityStructureSpecialitiesHierarcare.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityTypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUniversityTypesOfFinansing.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUzCurentDocs.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUzLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dUzLogData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dVakAcademicAttestationCase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dVakAcademicAttestationCaseHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebAcademicDegreies.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebAcademicRank.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebBooksAndPublications.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebCheckStats.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebGovernmentAwards.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsEducation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsForeign.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsPhoto.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsStatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsStatusType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonStatement.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonStatementData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebPersonsTrustee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesScansGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesScansHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesScansPages.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesScansType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesStatusHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\dWebUniversitiesStatusHistoryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ua.edu.znu.edbo\EDBOGuides.wsdl" />
+    <None Include="Web References\ua.edu.znu.edbo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://edbo.znu.edu.ua:9091/EDBOGuides/EDBOGuides.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ua.edu.znu.edbo\</RelPath>
+      <UpdateFromURL>http://edbo.znu.edu.ua:9091/EDBOGuides/EDBOGuides.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EDEBO_dict_loader_ua_edu_znu_edbo_EDBOGuides</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
