@@ -10,7 +10,7 @@
         private int idLanguage = 1;
         private string universityKode = "ab1bc732-51f3-475c-bcfe-368363369020";
         private string applicationKey = "Y0NzMXVGYnplb2lYZzhxVlA3ZUZ4eFJualhlNnowbkh2dmpTQ0FSNkc5U09iOW9yWExQUnVLZ1FWZVNIQmY5b2JMQ1ZaSHRvcmg5eFFka2pKWGlabUZvVnBFN3hTakZCYUROQkhEQ3FzQUFtTFQ5UzRKOE82a2NGeFJGdUs1rMC=";
-        private int idSeason = 6; // 2 - 2012, 3 - 2013, ...
+        private int idSeason = 6; // 2 - 2012, 3 - 2013, 4 - 2014, ...
 
         public string Login
         {
